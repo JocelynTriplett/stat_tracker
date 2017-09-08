@@ -6,6 +6,7 @@ const session = require('express-session');
 const mustache = require('mustache');
 const mustache = require('mustache-express');
 const mongoose = require('mongoose');
+const Activity = require("./models/activity");
 mongoose.Promise = require('bluebird');
 
 mongoose.connect('mongodb://localhost:27017/stats');
