@@ -1,14 +1,26 @@
  <!DOCTYPE html>
  <html lang="en">
-  <head>
+
+<head>
      <meta charset="UTF-8">
      <title>TITLE</title>
      <meta name="description" content="DESCRIPTION">
-     <link rel="stylesheet" href="PATH">
-  </head>
+    <link rel="stylesheet" href="PATH">
+ </head>
 
-  <body>
-    <h1>This is the index.mustache file</h1>
-  </body>
+ <body>
+  <h1>Please log in:</h1>
+  <form action="/" method="post">
+    <label for="username">username (email)</label>
+    <input type=email name="username" />
+    <br />
+    <br />
+    <label for="password">password</label>
+    <input type=password name="password" />
+    <br />
+    <br />
+    <input type="submit" />
+  </form>
+ </body>
 
  </html>
