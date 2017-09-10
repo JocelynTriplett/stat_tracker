@@ -5,27 +5,26 @@
      <meta charset="UTF-8">
      <title>TITLE</title>
      <meta name="description" content="DESCRIPTION">
-    <link rel="stylesheet" href="PATH">
+    <link rel="stylesheet" href="https://cdn.shoelace.style/1.0.0-beta22/shoelace.css">
+    <link rel="stylesheet" href="/stylesheets/styles.css"
 
  </head>
 
  <body>
   <h1>Activities</h1>
   <ul>
-    {{#activity}}
-    <li>{{name}}</li>
-    <li>{{description}}</li>
-    <li>{{date_created}}</li>
-    <li>{{tracked_activity}}</li>
-    <li>{{notes}}</li>
-    <li>{{tags}}</li>
-    <li></li>
-    <li></li>
-
-
-    {{/activity}}
+    <table class="table-striped">
+      <thead>
+        <tr><th>Activities</th><th>Date Created</th></tr>
+      </thead>
+      <tbody>
+        {{#activity}}
+        <tr><td>{{name}}</td><td>{{date_created}}</td></tr>
+        {{/activity}}
+      </tbody>
+    </table>
   </ul>
-
+<script src="https://cdn.shoelace.style/1.0.0-beta22/shoelace.js"></script>
  </body>
 
  </html>
