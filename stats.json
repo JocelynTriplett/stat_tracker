@@ -1,0 +1,21 @@
+{
+  "name":"drink water",
+  "user":"rabbit@example.com",
+  "description":"drink a glass of water",
+  "date_created":"20170805",
+  "tracked_activity":[{"date":"20170805", "amount":1},{"date":"20170806","amount":3},{"date":"20170807","amount":2}]
+},
+{
+  "name":"eat treats",
+  "user":"alfie@example.com",
+  "description":"eat after dinner treats",
+  "date_created":"20170905",
+  "tracked_activity":[{"date":"20170805", "amount":1},{"date":"20170806","amount":1},{"date":"20170807","amount":1}]
+},
+{
+  "name":"chase squirrels",
+  "user":"rabbit@example.com",
+  "description":"chase squirrel in backyard",
+  "date_created":"20170912",
+  "tracked_activity":[{"date":"20170913", "amount":1},{"date":"20170915","amount":2},{"date":"20170916","amount":4}]
+}
