@@ -15,6 +15,7 @@ router.get('/activities/:id', function(req, res){
 router.post('/activities/:id/stats', function (req, res) {
   console.log(req.body);
   Activity.findOne({_id: req.params.id}).then(function(activity){
+    console.log("activity: "+activity);
     activity.tracked_activity.push(req.body);
     activity.save().then(function () {
         res.redirect('/activities/');
