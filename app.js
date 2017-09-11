@@ -24,7 +24,7 @@ app.use(session({
   saveUninitialized: true
 }))
 // add ability to parse URL parameter
-//app.use(bodyParser.json());
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 // routers

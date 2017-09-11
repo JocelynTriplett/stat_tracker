@@ -19,11 +19,10 @@ const activitySchema = new mongoose.Schema({
   tracked_activity: [
        {
            date: {
-               type: String,
-               required: true,
+               type: String
            },
            amount: {
-               type: Number,
+               type: Number
            },
        }
    ],
