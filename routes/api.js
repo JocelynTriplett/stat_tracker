@@ -36,6 +36,22 @@ router.post('/activities/:id/stats', function (req, res) {
 })
 });
 
+router.delete('/activities/:id/stats', function (req, res) {
+  console.log(req.body);
+  Activity.findOne({_id: req.params.id}).then(function(activity){
+    activity.tracked_activity = [];
+    console.log("removed stats for "+activity)
+    activity.save().then(function () {
+        res.redirect('/activities/:id');
+  })
+  .catch(function (error) {
+    let errorMsg;
+      errorMsg = "You have encountered an unknown error."
+    res.render('activities/:id', {errorMsg: errorMsg});
+  })
+})
+});
+
 router.get('/activities/', function(req, res){
   Activity.find().then(function (activity){
     res.json(activity);
