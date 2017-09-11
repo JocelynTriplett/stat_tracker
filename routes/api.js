@@ -12,6 +12,14 @@ router.get('/activities/:id', function(req, res){
   })
 });
 
+router.delete('/activities/:id', function (req, res) {
+  console.log(req.body.name);
+  Activity.deleteOne({_id: req.params.id}).then(function(activity){
+    console.log(activity+" was deleted.")
+    res.redirect('/activities/')
+  })
+});
+
 router.post('/activities/:id/stats', function (req, res) {
   console.log(req.body);
   Activity.findOne({_id: req.params.id}).then(function(activity){
